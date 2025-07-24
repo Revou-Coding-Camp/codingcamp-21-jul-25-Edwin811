@@ -1,0 +1,141 @@
+#clear-all {
+  display: block;
+  width: 100%;
+  margin: 15px 0 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#clear-all:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f8f9fa;
+  padding: 30px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.filter {
+  margin: 20px 0;
+}
+
+.filter input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#todo-list {
+  list-style: none;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f1f1;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  animation: fadeIn 0.3s ease;
+  #todo-list li {
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .container {
+      padding: 15px;
+    }
+    form input,
+    form button,
+    .filter input {
+      font-size: 14px;
+      padding: 8px;
+    }
+    #todo-list li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+  }
+}
+
+#todo-list li .date {
+  font-size: 12px;
+  color: #555;
+}
+
+#todo-list button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#todo-list button:hover {
+  background-color: #b52a36;
+}
